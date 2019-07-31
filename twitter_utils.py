@@ -3,10 +3,10 @@ import yaml
 
 
 def _get_api():
-    return Api(consumer_key = config['APP_KEY'],
-    consumer_secret = config['APP_SECRET'], 
-    access_token_key = ['OAUTH_TOKEN'], 
-    access_token_secret = ['OAUTH_TOKEN_SECRET')
+    return Api(consumer_key = config['app_key'],
+    consumer_secret = config['app_secret'], 
+    access_token_key = ['oauth_token'], 
+    access_token_secret = ['oauth_token_secret')
     #print (api.VerifyCredentials())
 
 def _post_misc_msg():

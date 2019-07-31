@@ -4,6 +4,7 @@ I count people taking selfies of my window in DUMBO, Brooklyn using [Tensorflow'
 
 Check out how well I count at [@howbusyisdumbo](twitter.com/howbusyisdumbo)
 
+https://twitter.com/howbusyisdumbo/status/1146935651721457664
 ![18 people](https://pbs.twimg.com/media/D-q75VNXsAAuubl?format=jpg&name=large)
 
 ----

@@ -206,7 +206,7 @@ def main():
     _init_inference_graph()
     detection_graph, category_index = _init_detection_graph()
     camera = _init_camera_interface()
-    count = 0
+    count = 1
     currentMax = 0
     candidate_pool = []
     
@@ -249,11 +249,9 @@ def main():
             candidate_pool = []
             print "done finding a max in a pool of {:s} images - starting a new candidate pool of images now...".format(str(config['how_many_to_check']))
         
-        count += 1
-        
         end = time.time()
-        
         print "loop {:d} took {:.1f}s".format(count, end - start)
+        count += 1
             
         # cleanup
         if cv2.waitKey(25) & 0xFF == ord('q'):

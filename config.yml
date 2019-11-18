@@ -7,13 +7,10 @@ width: 1920
 height: 1088
 
 # Twitter application authentication
-app_key: 'YOUR TWITTER APP KEY'
-app_secret: 'YOUR TWITTER APP SECRET'
-oauth_token: 'YOUR TWITTER OAUTH TOKEN'
-oauth_token_secret: 'YOUR TWITTER OAUTH SECRET'
+# read the API keys from .env instead! http://jonathansoma.com/lede/foundations-2019/classes/apis/keeping-api-keys-secret/
 
-# how many images to take before declaring a new "most people" winner
-how_many_to_check: 30
+# number of image samples to check before  declaring a new "most people" winner for a single loop
+how_many_to_check: 2
 visualize_obj_detection: False
 testing_locally: False
 min_confidence: 0.25

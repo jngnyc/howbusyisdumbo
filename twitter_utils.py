@@ -2,17 +2,17 @@ from twitter import Api
 import yaml
 import os
 import sys
+from dotenv import load_dotenv
 
 
-def _get_api():    
-    config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
+def _get_api():
 
-    # TODO - check validity of the config obj
+    load_dotenv()
 
-    return Api(consumer_key = config['app_key'],
-    consumer_secret = config['app_secret'], 
-    access_token_key = config['oauth_token'], 
-    access_token_secret = config['oauth_token_secret'])
+    return Api(consumer_key = os.getenv('app_key'),
+        consumer_secret = os.getenv('app_secret'),
+        access_token_key = os.getenv('oauth_token'),
+        access_token_secret = os.getenv('oauth_token_secret') )
     #print (api.VerifyCredentials())
 
 def _post_misc_msg():

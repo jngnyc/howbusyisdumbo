@@ -30,9 +30,6 @@ from twython import TwythonStreamer
 image_number = 0
 config = []
 
-# Search terms
-TERMS = '@howbusyisdumbo'
-
 TESTING_LOCALLY = False
 
 IMAGE_RAW = (os.getcwd() + "/images/" + ('raw%s.jpg' % 1))
@@ -47,7 +44,6 @@ DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb' 
 PATH_TO_LABELS = '/home/pi/howbusyisdumbo/tensorflow/models/research/object_detection/data/mscoco_label_map.pbtxt'
 NUM_CLASSES = 90
-IMAGE_SIZE = (12,8)
 
 def _init_inference_graph():
     print('initializing inference graph...')
@@ -213,6 +209,8 @@ def main():
     print('starting main detection loop')
     
     while True:
+
+        # TODO - make timezone a parameter in config.yml
         ts = datetime.datetime.now(timezone('EST'))
         start = time.time()
         
